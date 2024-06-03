@@ -1,0 +1,10 @@
+--La fragmentación Horizontal se distingue por su creación de tablas más pequeñas 
+-- Basándose en algún criterio, en mi caso el criterio es la "SEDE" desde donde se registra el alumno.
+
+--PROCEDIMIENTO:
+--Crear tablas con los mismos encabezados de la tabla principal 
+--con la distinción de ser nombrados por sus Sedes y luego ejecutar las siguientes consultas
+--Para insertar los datos de la tabla principal "Alumno" a las tablas previamente creadas
+
+INSERT INTO alumno_santodgo_h1 SELECT * FROM alumno WHERE extension = 'Santo Domingo';
+INSERT INTO alumno_ambato_h1 SELECT * FROM alumno WHERE extension = 'Ambato';
