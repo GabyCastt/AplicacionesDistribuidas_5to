@@ -1,0 +1,13 @@
+--Crear la columna `id_Detalle_pedido` insertandola al comienzo de la tabla Detalle_pedido
+
+ALTER TABLE `detalle_pedido`
+ADD `id_Detalle_pedido` INT FIRST; 
+
+-- Eliminar las relaciones que están en la tabla Detalle_producto
+--Ejecutar esta consulta 
+
+ALTER TABLE `detalle_pedido`
+DROP PRIMARY KEY,
+MODIFY COLUMN `id_Detalle_pedido` INT AUTO_INCREMENT PRIMARY KEY FIRST;
+
+-- Insertar las relaciones
